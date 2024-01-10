@@ -22,9 +22,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//Route::resource('drink', DrinkController::class)->middleware('auth');
-//Route::resource('student', StudentController::class)->middleware('auth');
-
 Route::middleware('auth')->prefix('drink')->group(function () {
     Route::get('/', [DrinkController::class, 'index'])->name('drink.index');
     Route::get('/create', [DrinkController::class, 'create'])->name('drink.create');

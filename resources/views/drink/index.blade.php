@@ -22,7 +22,9 @@
                           </tr>
                           </thead>
                           <tbody>
-                              {{ $temp=1 }}
+                            @php
+                              $temp=1;
+                            @endphp
                               @foreach ($drinks as $drink)
                               <tr>
                                 <th scope="row">{{$temp++}}</th>

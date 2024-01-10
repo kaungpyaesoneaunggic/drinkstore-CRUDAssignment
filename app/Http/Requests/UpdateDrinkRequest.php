@@ -26,8 +26,8 @@ class UpdateDrinkRequest extends FormRequest
         return [
             //
             "name"=> "required",
-            "price"=> "required",
-            "quantity"=> "required"
+            "price"=> "required|numeric",
+            "quantity"=> "required|numeric"
         ];
     }
 }
